@@ -1,0 +1,503 @@
+
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+ <title>L'Ultima Sinapsi - A-Frame</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene  shadow="type: pcfsoft" renderer="shadowMap.enabled: true;" 
+             fog="type: exponential; color: #222; density: 0.0001"> 
+
+<!-- luci scritta -->
+<a-light type="spot" color="white" intensity="10"
+      angle="55" penumbra="0.15" distance="12" decay="1"
+      position="0 12 4.7" rotation="80 0 0" 
+         animation="property: light.intensity; from: 3; to: 10; dir: alternate; dur: 700; loop: true"></a-light>
+<a-light type="spot" color="white" intensity="10"
+      angle="45" penumbra="0.15" distance="10" decay="1"
+      position="3 12 4.7" rotation="80 0 0" 
+          animation="property: light.intensity; from: 3; to: 10; dir: alternate; dur: 700; loop: true"></a-light>
+ <a-light type="spot" color="white" intensity="10"
+      angle="45" penumbra="0.15" distance="10" decay="1"
+      position="-3 12 4.7" rotation="80 0 0" 
+           animation="property: light.intensity; from: 3; to: 10; dir: alternate; dur: 700; loop: true"></a-light>
+      <a-light type="spot" color="white" intensity="10"
+      angle="45" penumbra="0.15" distance="10" decay="1"
+      position="6 12 4.7" rotation="80 0 0" 
+                animation="property: light.intensity; from: 3; to: 10; dir: alternate; dur: 700; loop: true"></a-light>
+ <a-light type="spot" color="white" intensity="10"
+      angle="45" penumbra="0.15" distance="10" decay="1"
+      position="-6 12 4.7" rotation="80 0 0" 
+           animation="property: light.intensity; from: 3; to: 10; dir: alternate; dur: 700; loop: true"></a-light>
+      
+      <!--luce spazio -->
+  <a-light type="hemisphere" color="blue" groundcolor="#080820" intensity="0.65"></a-light>
+ 
+  <!-- luce dentro stanza-->
+<a-light type="point" color="white" intensity="0" distance="8" decay="0.25" position="0 5 0"></a-light> 
+      <a-light type="spot" color="white" intensity="10"
+      angle="90" penumbra="0.7" distance="24" decay="1.1"
+      position="0 5 0.3" rotation="-90 0 0" castshadow="true"></a-light> 
+      <a-light type="spot" color="white" intensity="14"
+      angle="90" penumbra="0.7" distance="24" decay="1"
+      position="0 5 6.6" rotation="-0 0 0" castshadow="true"></a-light>
+
+```
+  <!--luci direzionali sul palco -->
+
+<a-light type="spot" color="yellow" intensity="30"
+      angle\="56" penumbra="0.15" distance="40" decay="0.93"
+      position="-18 -3 19" rotation="-10 -33 0" ></a-light>
+      <a-cone 
+  position="-17.2 -6 18.4"
+  rotation="-65 -33 0"
+  height="2"
+  radius-bottom="0.01"
+  radius-top="1.2"
+  color="white"
+  material="opacity: 0.45; transparent: true; side: double">
+</a-cone>
+
+```
+  <a-light type="spot" color="yellow" intensity="30"
+     angle="56" penumbra="0.15" distance="40" decay="0.93"
+     position="18 -3 19" rotation="-10 33 0" ></a-light>
+       <a-cone 
+  position="17.2 -6 18.4"
+  rotation="-65 33 0"
+  height="2"
+  radius-bottom="0.01"
+  radius-top="1.2"
+  color="white"
+  material="opacity: 0.45; transparent: true; side: double">
+</a-cone>
+  
+  <!--luce sul cervello -->
+ sopra
+  <a-light type="spot" color="red" intensity="43"
+     angle="80" penumbra="0.6" distance="16" decay="1.4"
+     position="0 5 0.9" rotation="-90 0 0" castshadow="true"
+           animation="property: light.intensity; from: 30; to: 45; dir: alternate; dur: 1000; loop: true"
+></a-light>
+
+      <a-light type="spot" color="#4A90E2" intensity="2.3"
+     angle="55" penumbra="0.55" distance="24" decay="0.2"
+     position="0 5 0.7" rotation="-90 0 0" castshadow="true"
+             animation="property: light.intensity; from: 0; to: 2; dir: alternate; dur: 1000; loop: true"></a-light>
+      
+  <a-light type="spot" color="#4A90E2" intensity="85"
+     angle="15" penumbra="0.25" distance="24" decay="0.2"
+     position="0 5 0.7" rotation="-90 0 0" castshadow="true"
+             animation="property: light.intensity; from: 30; to: 85; dir: alternate; dur: 1000; loop: true"
+></a-light>
+  
+  riflessi
+   <a-light type="spot" color="red" intensity="90"
+     angle="75" penumbra="0.9" distance="16" decay="1.63"
+     position="0 5 6" rotation="0 0 0" castshadow="true"
+            animation="property: light.intensity; from: 65; to: 100; dir: alternate; dur: 10; loop: true"></a-light>
+
+
+  <!--luci sfondo quadro -->
+  <a-light type="point" color="#FFA420" intensity="22" distance="8" decay="2.2" position="0 3.2 -13.5" castshadow="true"></a-light>
+   <a-light type="point" color="#FFA420" intensity="7.6" distance="6" decay="1.8" position="-3.5 3.2 -13" castshadow="true"></a-light>
+   <a-light type="point" color="#FFA420" intensity="7.6" distance="6" decay="1.8" position="3.5 3.2 -13" castshadow="true"></a-light>
+
+ <!--Faro su cat gpt -->     
+<!-- Faro per il modello grande -->
+<a-light type="spot" color="white" intensity="160"
+      angle="120" penumbra="0.6" distance="210" decay="1."
+      position="0 26 -48" rotation="70 50 0" ></a-light>
+
+<!-- Faro per il modello<!-- Faro per il modello delle mani -->
+<a-light type="spot" color="darkblue" intensity="80"
+      angle="100" penumbra="0.15" distance="45" decay="0.80"
+      position="0 18 -24" rotation="30 0 0" ></a-light>
+
+      
+<!--lanterna alta -->      
+      
+      
+<!--Struttura -->
+    <!-- sfondo -->
+```
+
+<a-sphere 
+radius="500" 
+position="0 0 0"
+segments-height="64"
+segments-width="64"
+material="side: back; src:https://cdn.glitch.me/123dd74e-bfa0-405f-8654-76167e6f1440/sfondo-dello-spazio-esterno.jpg?v=1746920223095; repeat: 1 1;"
+scale="-1 1 1"> </a-sphere>
+
+```
+  <!-- Pavimento -->
+  <a-plane position="0 0 -5.28" rotation="-90 0 0" width="30" height="20" 
+           material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Asphalt031_1K-PNG_Color.png?v=1746919241478"
+            shadow="receive: true"></a-plane>
+  
+   <a-plane position="0 -5.3 -5.30" rotation="-90 0 0" width="75" height="65" color="black"></a-plane>
+
+  
+```
+
+  <!-- cornice -->
+
+```
+  <a-box position="0 10.6 4.2" width="30" height="3.9"
+         material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/26569064_sl_121019_25870_67.jpg?v=1746920881259"></a-box>
+   <a-box position="0 -2.80 4.2" width="30" height="5.5" material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/26569064_sl_121019_25870_67.jpg?v=1746920881259" ></a-box>
+  <a-box position="11.55 3.5 4.23" width="6.9" height="18" material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/5597360_11014.jpg?v=1746920855339"></a-box>
+   <a-box position="-11.55 3.5 4.23" width="6.9" height="18" material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/5597360_11014.jpg?v=1746920855339"></a-box>
+  
+  <!-- contenitore esterno (pareti laterali e tetto) -->
+  <a-box position="0 3.5 -15.5" width="30" height="18" depth="0.5" color="#cccccc" material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/5597360_11014.jpg?v=1746920855339"></a-box> <!-- Parete dietro -->
+  <a-box position="-15 3.5 -5.35" width="0.1" height="18" depth="20" color="#cccccc" material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/5597360_11014.jpg?v=1746920855339"></a-box> <!-- Parete sinistra -->
+  <a-box position="15 3.5 -5.35" width="0.1" height="18" depth="20" color="#cccccc" material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/5597360_11014.jpg?v=1746920855339"></a-box> <!-- Parete destra -->
+  <a-box position="0 12.5 -5.35" width="30" height="0.1" depth="20" color="#cccccc" material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/5597360_11014.jpg?v=1746920855339"></a-box> <!-- Tetto -->
+
+  <!-- Stanza interna (pareti in prospettiva) -->
+  <a-box position="-6 2.5 -9" rotation="0 -10 0" width="0.2" height="13" depth="26" color="#aaaaaa" material="src:https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/ChatGPT%20Image%20May%2021%2C%202025%2C%2003_55_40%20AM.png?v=1747792553040"
+         shadow="receive: true"></a-box>
+  <a-box position="6 2.5 -9" rotation="0 10 0" width="0.2" height="13" depth="26"  color="#aaaaaa" material="src:https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/ChatGPT%20Image%20May%2021%2C%202025%2C%2003_55_40%20AM.png?v=1747792553040"
+         shadow="receive: true"></a-box>
+
+   <!--trapezio tetto-->
+
+<a-box position="0 8 -6" rotation="-4 0 0" width="28" height="0.1" depth="19.5" color="red" 
+    material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/ChatGPT%20Image%20May%2010%2C%202025%2C%2010_02_13%20PM.png?v=1746907353310 "
+       shadow="receive: true"></a-box>
+
+```
+  <!-- Parete di fondo con squarcio a 3 archi (finta) -->
+  <!-- Archi centrali -->
+  <a-box position="-1.75 2.5 -14" width="1." height="5" depth="1" rotation= "0 -18 0" color="#bbbbbb"
+           material="
+src: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Color.png?v=1746908545800;
+normalMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_NormalGL.png?v=1746908545800;
+ambientOcclusionMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_AmbientOcclusion.png?v=1746908545800;
+roughnessMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Roughness.png?v=1746908545800;
+
+roughness: 1;
+metalness: 0;"
+         shadow="receive: true"></a-box>
+ 
+      <a-box position="1.75 2.5 -14" width="1." height="5" depth="1" rotation= "0 18 0" color="#bbbbbb"
+           material="
+src: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Color.png?v=1746908545800;
+normalMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_NormalGL.png?v=1746908545800;
+ambientOcclusionMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_AmbientOcclusion.png?v=1746908545800;
+roughnessMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Roughness.png?v=1746908545800;
+repeat: 2 2;
+roughness: 1;
+metalness: 0;"
+             shadow="receive: true"></a-box>
+  
+      <a-box position="-1.95 2.5 -13.35" width="1.035" height="5" depth="0.1" color="#bbbbbb"
+           material="
+src: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Color.png?v=1746908545800;
+normalMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_NormalGL.png?v=1746908545800;
+ambientOcclusionMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_AmbientOcclusion.png?v=1746908545800;
+roughnessMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Roughness.png?v=1746908545800;
+repeat: 2 2;
+roughness: 1;
+metalness: 0;"
+             shadow="receive: true"></a-box>
+ 
+      <a-box position="1.95 2.5 -13.35" width="1.035" height="5" depth="0.1" color="#bbbbbb"
+           material="
+src: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Color.png?v=1746908545800;
+normalMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_NormalGL.png?v=1746908545800;
+ambientOcclusionMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_AmbientOcclusion.png?v=1746908545800;
+roughnessMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Roughness.png?v=1746908545800;
+repeat: 2 2;
+roughness: 1;
+metalness: 0;"
+             shadow="receive: true"></a-box>
+  
+  
+  <!-- Archi laterali -->
+ <a-box position="-5 2.5 -14" width="1.8" height="5" depth="1" rotation= "0 -18 0" color="#bbbbbb"
+         material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Color.png?v=1746908545800;
+                   ambientOcclusionMap:nohttps://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_AmbientOcclusion.png?v=1746908564439;
+                   normalmap:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_NormalGL.png?v=1746908582061"
+        shadow="receive: true"></a-box>
+  
+  <a-box position="5 2.5 -14" width="1.8" height="5" depth="1" rotation= "0 18 0" color="#bbbbbb"
+           material="
+src: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Color.png?v=1746908545800;
+normalMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_NormalGL.png?v=1746908545800;
+ambientOcclusionMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_AmbientOcclusion.png?v=1746908545800;
+roughnessMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Roughness.png?v=1746908545800;
+repeat: 2 2;
+roughness: 1;
+metalness: 0;"
+          shadow="receive: true"></a-box>
+         
+  
+  <a-box position="-5.20 2.5 -13.25" width="1.8" height="5" depth="0.1" rotation="0 6 0" color="#bbbbbb"
+           material="
+src: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Color.png?v=1746908545800;
+normalMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_NormalGL.png?v=1746908545800;
+ambientOcclusionMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_AmbientOcclusion.png?v=1746908545800;
+roughnessMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Roughness.png?v=1746908545800;
+repeat: 2 2;
+roughness: 1;
+metalness: 0;"
+          shadow="receive: true"></a-box>
+ 
+  <a-box position="5.20 2.5 -13.25" width="1.8" height="5" depth="0.1" rotation= "0 -6 0" color="#bbbbbb"
+           material="
+src: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Color.png?v=1746908545800;
+normalMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_NormalGL.png?v=1746908545800;
+ambientOcclusionMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_AmbientOcclusion.png?v=1746908545800;
+roughnessMap: https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Roughness.png?v=1746908545800;
+repeat: 2 2;
+roughness: 1;
+metalness: 0;"
+          shadow="receive: true"></a-box>
+  
+  <!-- tettoo e basi archi-->
+  <a-box position="-3.8 1 -13.25" width="4.7" height="2" depth="0.02" rotation= "0 2.6 0" color="#bbbbbb"
+         material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Color.png?v=1746908545800"
+          shadow="receive: true"></a-box>
+   <a-box position="3.8 1 -13.25" width="4.7" height="2" depth="0.02" rotation= "0 -2.6 0" color="#bbbbbb" 
+          material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Color.png?v=1746908545800"
+           shadow="receive: true"></a-box>
+ 
+  <a-box position="0 6.3 -13.87" width="12" height="2.5" depth="1.3" rotation= "0 0 0" color="#bbbbbb"
+          material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/Rock062_1K-PNG_Color.png?v=1746908545800"
+          shadow="receive: true"></a-box>
+  
+  
+  <!-- Sfondo paesaggio (parete nascosta dietro gli archi) -->
+  <a-plane position="0 2.5 -15" width="12" height="6.5"  rotation="0 0 0"
+           material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/vecteezy_beautiful-tuscany-landscape-at-sunset-italy-europe_30755124.jpg?v=1747008321187;
+            emissive: white; emissiveIntensity:0.014;"></a-plane>
+
+  
+  
+   <!-- Tavolo -->
+```
+
+<a-box position="0 0 1" width="10" height="2.3" depth="2" color="#8B4513"
+    material="src:https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/ChatGPT%20Image%20May%2012%2C%202025%2C%2002_04_50%20AM.png?v=1747008313697"
+        shadow="cast: true"></a-box>
+
+```
+  <!-- cervello-->
+   <a-gltf-model src="https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/brain_in_a_jar.glb?v=1747018513071; emissive: blue ; emissiveIntensity:1000;" 
+                 position="0 1. 0.8" scale="0.08 0.08 0.08" rotation="0 0 0"
+                  shadow="cast: true"></a-gltf-model>
+  
+```
+
+<!-- Er Quakéro al centro -->
+ <a-gltf-model src="https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/Desert_Duck_Duelist_0520175416_texture.glb?v=1747763763583"
+                position="0 1.6 -0.83" scale="1.7 1.7 1.7" rotation="0 0 0"
+                 shadow="cast: true; receive: true" 
+                sound="src: https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/er%20quaker%20sound.mp3?v=1747795590969;
+           on: click;
+           positional: true;
+           volume: 0.4;
+           distanceModel: inverse;
+           maxDistance: 20;
+           refDistance: 1;
+           rolloffFactor: 1;"></a-gltf-model>
+
+ <!--Brainrots -->     
+
+chimpa <a-gltf-model src="https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/chimpanzini_bananini%20(1).glb?v=1746900416966"
+                 position="-5.4 1.7 -0.98" scale="1.34 1.92 1.3" rotation="14 63 6"
+                      shadow="cast: true; receive: true"
+                      sound="src: https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/Chimpanzini%20sound.mp3?v=1747780534906;
+           on: click;
+           positional: true;
+           volume: 0.4;
+           distanceModel: inverse;
+           maxDistance: 20;
+           refDistance: 1;
+           rolloffFactor: 1;"></a-gltf-model>
+
+```
+   mucca
+  <a-gltf-model src="https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/la_vaca_saturno_satellita_cowtellite_brainrot.glb?v=1746900425532"
+                position="-5.9 1.32 1" scale="1.5 1.5 1.5" rotation="0 56 0"
+                 shadow="cast: true; receive: true"
+                sound="src: https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/La%20vacca%20Saturna%20Sound.mp3?v=1747780330698;
+           on: click;
+           positional: true;
+           volume: 0.4;
+           distanceModel: inverse;
+           maxDistance: 20;
+           refDistance: 1;
+           rolloffFactor: 1;"></a-gltf-model>
+  
+   crocodilo
+  <a-gltf-model src="https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/bombardino_crocodilo.glb?v=1746900447531" 
+                  position="-4.0 0 -4.1" rotation="-16 21 0"
+                scale="0.19 0.21 0.19"
+                 shadow="cast: true; receive: true"
+                 sound="src: https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/Crocodilo%20Sound.mp3?v=1747780342176;
+           on: click;
+           positional: true;
+           volume: 0.4;
+           distanceModel: inverse;
+           maxDistance: 20;
+           refDistance: 1;
+           rolloffFactor: 1;"></a-gltf-model>
+  tralla
+  <a-gltf-model src="https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/tralalero_tralala.glb?v=1746900806063" 
+                position="-1.83 -0.25 -2.3" scale="0.23 0.25 0.21" rotation="-12 16 -2"
+                 shadow="cast: true; receive: true"
+                sound="src: https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/Trallallero%20sound.mp3?v=1747780344891;
+           on: click;
+           positional: true;
+           volume: 0.4;
+           distanceModel: inverse;
+           maxDistance: 20;
+           refDistance: 1;
+           rolloffFactor: 1;"></a-gltf-model>
+  
+   tun tun
+  <a-gltf-model src="https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/tung_tung_sahur_not_ai.glb?v=1746884458401"  
+               position="1.32 0 -1.45"  rotation="7 -35 -2"  
+                scale="0.32 0.25 0.28"
+                sound="src: https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/Tun%20tunt%20un%20tun.mp3?v=1747780297404;
+           on: click;
+           positional: true;
+           volume: 0.4;
+           distanceModel: inverse;
+           maxDistance: 20;
+           refDistance: 1;
+           rolloffFactor: 1;" ></a-gltf-model>
+trippi
+  <a-gltf-model src="https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/trippi_troppi.glb?v=1746900403732" 
+                 position="-4.32 -0.1 -1.45" rotation="-9 33 0"
+                scale="1.83 1.838 1.83"
+                 shadow="cast: true; receive: true"
+                 sound="src:https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/Trippi%20troppi%20Sound.mp3?v=1747780311990;
+           on: click;
+           positional: true;
+           volume: 0.4;
+           distanceModel: inverse;
+           maxDistance: 20;
+           refDistance: 1;
+           rolloffFactor: 1;"></a-gltf-model>
+
+      lirli
+
+  <a-gltf-model src="https://cdn.glitch.me/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/lirili_larila_game_ready_3d_model_free_download.glb?v=1747782813306" 
+                 position="2.75 1.3 -4.3" rotation="-9 170 0"
+                scale="3.2 3.2 2.5"
+                 shadow="cast: true; receive: true"
+                 sound="src:https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/lirli%20larila%20sound.mp3?v=1747781060395;
+           on: click;
+           positional: true;
+           volume: 0.4;
+           distanceModel: inverse;
+           maxDistance: 20;
+           refDistance: 1;
+           rolloffFactor: 1;"></a-gltf-model>
+
+
+
+```
+  Spiru
+  <a-gltf-model src="https://cdn.glitch.me/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/shpioniro_golubiro_game_3d_model_free_download.glb?v=1747006177733"  
+                position="5.12 0.1 -0.5" scale="1.5 1.8 1.8" rotation="3 4.4 0"
+                 shadow="cast: true; receive: true"
+                 sound="src:https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/Spiru%20Sound.mp3?v=1747780327209;
+           on: click;
+           positional: true;
+           volume: 0.4;
+           distanceModel: inverse;
+           maxDistance: 20;
+           refDistance: 1;
+           rolloffFactor: 1;"></a-gltf-model>
+ 
+ Brombito bandito
+
+<a-gltf-model src="https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/el_bobrito_gangsterito_gangster__beaver.glb?v=1747006044392"
+                 position="5.83 1.4 0.55" scale="1.48 1.5 1.45" rotation="0 -58 0" 
+               shadow="cast: true; receive: true"
+               sound="src:https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/Brovorito%20Bandito%20sound.mp3?v=1747780322568;
+           on: click;
+           positional: true;
+           volume: 0.4;
+           distanceModel: inverse;
+           maxDistance: 20;
+           refDistance: 1;
+           rolloffFactor: 1;"></a-gltf-model>
+
+```
+   ballerina
+  <a-gltf-model src="https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/ballerina_cappuccina.glb?v=1746900781376"
+                position="4.14 0.15 -1.6" scale="1.24 1.26 1.26" rotation="-3.7 -26 -5.6"
+                 shadow="cast: true; receive: true"
+                sound="src:https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/Cappucina%20Ballerina%20%20Sound.mp3?v=1747780317594;
+           on: click;
+           positional: true;
+           volume: 0.4;
+           distanceModel: inverse;
+           maxDistance: 20;
+           refDistance: 1;
+           rolloffFactor: 1;"></a-gltf-model>  
+
+      cappuccino
+  <a-gltf-model src="https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/capuchino_assasino_3d_model_free.glb?v=1746900807079"  
+                position="3 0 -1.25" scale="0.48 0.53 0.48" rotation="-5 -30 5"
+                 shadow="cast: true; receive: true"
+                 sound="src:https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/Capuccino%20sound.mp3?v=1747780303343;
+           on: click;
+           positional: true;
+           volume: 0.4;
+           distanceModel: inverse;
+           maxDistance: 20;
+           refDistance: 1;
+           rolloffFactor: 1;"></a-gltf-model>
+ 
+```
+
+br br patapim <a-gltf-model src="https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/brr_brr_patapim_shuffling%20(1).glb?v=1746900433751" 
+              position="5.28 -0.28 -2.70" scale="0.28 0.286 0.28" rotation="7 -37 7"
+              shadow="cast: true; receive: true"
+              sound="src:https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/Brbrbrbr%20Ptapim%20sound.mp3?v=1747780306456;
+           on: click;
+           positional: true;
+           volume: 0.4;
+           distanceModel: inverse;
+           maxDistance: 20;
+           refDistance: 1;
+           rolloffFactor: 1;"></a-gltf-model>
+
+```
+  <!-- chat gpt e mani-->
+```
+
+<a-gltf-model src="https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/chatgpt.glb?v=1747016060331; emissive:white ; emissiveIntensity:0;" 
+              position="-15 79 -58" scale="120 120 120" rotation="40 15 0"></a-gltf-model>
+
+```
+   <a-gltf-model src="https://cdn.glitch.global/123dd74e-bfa0-405f-8654-76167e6f1440/free_basic_hands.glb?v=1747016040596;"
+                 position="-8 24 -52" scale="10 10 10" rotation="-2 -70 0"></a-gltf-model>
+
+<!--insegna -->
+<a-gltf-model src="https://cdn.glitch.global/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/insegna__0521003327_texture.glb?v=17477893747512" 
+              position="0 14.7 3.35" scale="6 3.5 4" rotation="5  0"></a-gltf-model>
+      
+      <!--musica di sottofondo -->
+        <a-entity sound="src:https://cdn.glitch.me/1dbac75b-d275-4ce0-817e-5ce6cc3a8c55/Research%20Center%20-%20Post%20Apocalyptic%20Dark%20Ambient%20Journey%20-%20Dark%20Dystopian%20Ambience.mp3?v=1747797453951 ; autoplay: true; loop: true; positional: false; volume: 0.2"></a-entity>
+
+
+<a-entity camera look-controls wasd-controls position="0 2 15">
+          <a-cursor></a-cursor>
+    </a-entity>
+
+```
+   </a-scene>
+ </body>
+```
+
+</html>
